@@ -1,0 +1,7 @@
+/* Looks like everyone uses the box-sizing boarder box as default */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
