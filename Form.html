@@ -23,23 +23,47 @@
     </div>
     <div class="div-form">
         <form id="survey-form">
-            <div id="div-name">
+            <div id="div-name" class="div-form-form">
                 <label id="name-label" for="name">Name:</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" required />
             </div>
-            <div id="div-email">
+            <div id="div-email" class="div-form-form">
                 <label id="email-label" for="email">Email:</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Example@mail.com" required />
             </div>
-            <div id="div-number">
+            <div id="div-number" class="div-form-form">
                 <label id="number-label" for="number">Employee ID:</label>
                 <input type="number" name="number" id="number" class="form-control" placeholder="Employee ID#" min="00001" max="99999" required />
                 <!-- the input type needs to be "number" to pass the FCC tests but in reality I would do <input type="text" pattern="[0-9]*" in order to get the leading zeros we would need for an employee id scenario. I believe this would also be the only way to have leading text characters as well. -->
             </div>
+            <div id="div-dropdown" class="div-form-form">
+                <label id="dropdown-label" for="dropdown">Location for PO Request:</label>
+                <select id="dropdown" name="location" class="form-control" required>
+                    <option disabled selected value>Select Office Location</option>
+                    <option value="Corporate">Corporate HQ</option>
+                    <option value="Hawaii">HI Office</option>
+                    <option value="Siberia">Siberia Office</option>
+                    <option value="NYC">New York City Office</option>
+                    <option value="London">London Office</option>                    
+                </select>
+            </div>
+            <div id="div-radio" class="div-form-form">
+                <label id="radio-label" for="radio">Type of Request:</label>
+                <label>
+                    <input name="po-type" value="new-vendor" type="radio" class="input-radio" checked />New Vendor
+                </label>
+                <label>
+                    <input name="po-type" value="current-vendor-new-po" type="radio" class="input-radio"/>Current Vendor New PO
+                </label>
+                <label>
+                    <input name="po-type" value="current-vendor-change-po" type="radio" class="input-radio"/>Current Vendor PO Change
+                </label>
+            </div>
+
         </form>
     </div>
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async defer></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
