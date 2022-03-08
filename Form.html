@@ -15,11 +15,28 @@
 </head>
 
 <body>
-    <div>
+    <div id="div-header">
         <header>
             <h1 id="title">Purchase Order Requisition Request Form</h1>
-            <p id="description">PO Request for SAP Project</p>
+            <p id="description">PO Request for SAP Projects</p>
         </header>
+    </div>
+    <div class="div-form">
+        <form id="survey-form">
+            <div id="div-name">
+                <label id="name-label" for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" required />
+            </div>
+            <div id="div-email">
+                <label id="email-label" for="email">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Example@mail.com" required />
+            </div>
+            <div id="div-number">
+                <label id="number-label" for="number">Employee ID:</label>
+                <input type="number" name="number" id="number" class="form-control" placeholder="Employee ID#" min="00001" max="99999" required />
+                <!-- the input type needs to be "number" to pass the FCC tests but in reality I would do <input type="text" pattern="[0-9]*" in order to get the leading zeros we would need for an employee id scenario. I believe this would also be the only way to have leading text characters as well. -->
+            </div>
+        </form>
     </div>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async defer></script>
