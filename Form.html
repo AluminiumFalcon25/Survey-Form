@@ -59,11 +59,31 @@
                     <input name="po-type" value="current-vendor-change-po" type="radio" class="input-radio"/>Current Vendor PO Change
                 </label>
             </div>
+            <br>
+            <div class="po-calc">
+                Quantity for PO: <input type="number" value="0" class="qty" id="qty" />
+                <br> Price per Quantity:<input type="number" value="0" id="po-price" />
+            </div>
+            <br>
+            <div id="equal" class="button">Calculate</div>
+            <br>
+            <div class="total-val">Requested Total
+
+                <div><span id="total_value">0</span></div>
+
+            </div>
+            <!-- I need to come back when I have a better understanding of JS for this. -->
+
+
+
+
+
 
         </form>
     </div>
-
+    <script src="Form.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </body>
 
 </html>

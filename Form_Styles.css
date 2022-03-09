@@ -24,3 +24,16 @@ header {
     padding: 0 50px;
     margin: 4rem auto;
 }
+
+#equal {
+    background-color: lightgrey;
+    border: 0.5px solid black;
+    cursor: pointer;
+    text-align: center;
+    width: 10rem;
+}
+
+#equal:hover {
+    background-color: #F5B47D;
+    transition: 0.5s ease-in-out;
+}
