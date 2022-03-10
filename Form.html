@@ -44,35 +44,57 @@
                     <option value="Hawaii">HI Office</option>
                     <option value="Siberia">Siberia Office</option>
                     <option value="NYC">New York City Office</option>
-                    <option value="London">London Office</option>                    
+                    <option value="London">London Office</option>
                 </select>
             </div>
             <div id="div-radio" class="div-form-form">
                 <label id="radio-label" for="radio">Type of Request:</label>
                 <label>
+                    <br>
                     <input name="po-type" value="new-vendor" type="radio" class="input-radio" checked />New Vendor
                 </label>
+                <br>
                 <label>
-                    <input name="po-type" value="current-vendor-new-po" type="radio" class="input-radio"/>Current Vendor New PO
+                    <input name="po-type" value="current-vendor-new-po" type="radio" class="input-radio" />Current
+                    Vendor New PO
                 </label>
+                <br>
                 <label>
-                    <input name="po-type" value="current-vendor-change-po" type="radio" class="input-radio"/>Current Vendor PO Change
+                    <input name="po-type" value="current-vendor-change-po" type="radio" class="input-radio" />Current
+                    Vendor PO Change
                 </label>
             </div>
             <br>
             <div class="po-calc">
-                Quantity for PO: <input type="number" value="0" class="qty" id="qty" />
-                <br> Price per Quantity:<input type="number" value="0" id="po-price" />
+                Quantity for PO: <input type="number" placeholder="0" class="qty" id="qty" />
+                <br> Price per Quantity:<input type="number" placeholder="0" id="po-price" />
             </div>
             <br>
-            <div id="equal" class="button">Calculate</div>
+            <button id="equal" class="button" onclick="calculateTotal();">Calculate</button>
+            <!-- This needs to be a button not a div or the calc wont work. unfortunately it displays errors with missing required fields and html email errors. Not a great user experience. Not sure if the functions can be separated out -->
             <br>
             <div class="total-val">Requested Total
-
-                <div><span id="total_value">0</span></div>
+                <input type="text" id="total_value" />
+            </div>
+            <br>
+            <div id="div-check" class="div-form-form">
+                <label id="cehck-label" for="check">Source of Quote (check all that apply):</label>
+                <br>
+                <label><input name="quote-source" value="competitive-bid" type="checkbox" class="input-checkbox" />
+                    Competitive Bid (3 vendors)
+                </label>
+                <br>
+                <label><input name="quote-source" value="strategic-sourcing" type="checkbox" class="input-checkbox" />
+                    Strategic Sourcing Team
+                </label>
+                <br>
+                <label><input name="quote-source" value="maintain" type="checkbox" class="input-checkbox" />
+                    Maintain Current Cost Level
+                </label>
+                <br>
 
             </div>
-            <!-- I need to come back when I have a better understanding of JS for this. -->
+
 
 
 
@@ -81,9 +103,8 @@
 
         </form>
     </div>
-    <script src="Form.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
+    <script src="Form.js"></script>
 </body>
 
 </html>
