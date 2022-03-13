@@ -1,4 +1,4 @@
-/* Looks like everyone uses the box-sizing boarder box as default */
+/* Looks like everyone uses the box-sizing boarder box as default which should help with design*/
 
 *,
 *::before,
@@ -25,7 +25,7 @@ header {
     margin: 4rem auto;
 }
 
-#equal {
+.button {
     background-color: lightgrey;
     border: 0.5px solid black;
     cursor: pointer;
@@ -33,7 +33,20 @@ header {
     width: 10rem;
 }
 
-#equal:hover {
+.button:hover {
     background-color: #F5B47D;
     transition: 0.5s ease-in-out;
+}
+
+.div-form {
+    background-color: #D2AE8F;
+    width: fit-content;
+}
+
+@media only screen and (Min-width: 600px) {
+    #survey-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
 }

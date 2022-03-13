@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 
 <head>
@@ -34,7 +30,7 @@
             <div id="div-number" class="div-form-form">
                 <label id="number-label" for="number">Employee ID:</label>
                 <input type="number" name="number" id="number" class="form-control" placeholder="Employee ID#" min="00001" max="99999" required />
-                <!-- the input type needs to be "number" to pass the FCC tests but in reality I would do <input type="text" pattern="[0-9]*" in order to get the leading zeros we would need for an employee id scenario. I believe this would also be the only way to have leading text characters as well. -->
+                <!-- the input type needs to be "number" to pass the FCC tests but in reality I would do <input type="text" pattern="[0-9]*" in order to get the leading zeros we would need for what a typical company would use for  employee id's'. I believe this would also be the only way to have leading text characters as well. -->
             </div>
             <div id="div-dropdown" class="div-form-form">
                 <label id="dropdown-label" for="dropdown">Location for PO Request:</label>
@@ -71,14 +67,14 @@
             </div>
             <br>
             <button id="equal" class="button" onclick="calculateTotal();">Calculate</button>
-            <!-- This needs to be a button not a div or the calc wont work. unfortunately it displays errors with missing required fields and html email errors. Not a great user experience. Not sure if the functions can be separated out -->
+            <!-- This needs to be a button not a div or the calc wont work. unfortunately it displays errors with missing required fields and html email errors. Ideally I would have the errors only show when the final submit button is pressed. I think the user experience here could be better. Not sure if the functions can be separated out between the buttons at this time. -->
             <br>
             <div class="total-val">Requested Total
                 <input type="text" id="total_value" />
             </div>
             <br>
             <div id="div-check" class="div-form-form">
-                <label id="cehck-label" for="check">Source of Quote (check all that apply):</label>
+                <label id="check-label" for="check">Source of Quote (check all that apply):</label>
                 <br>
                 <label><input name="quote-source" value="competitive-bid" type="checkbox" class="input-checkbox" />
                     Competitive Bid (3 vendors)
@@ -92,15 +88,17 @@
                     Maintain Current Cost Level
                 </label>
                 <br>
-
             </div>
-
-
-
-
-
-
-
+            <br>
+            <div id="div-text" class="div-form-form">
+                <label id="text-label" for="text">Contract Details:</label>
+                <br>
+                <textarea id="contract" class="div-form-form" name="contract" placeholder="Enter Contract Terms"></textarea>
+            </div>
+            <br>
+            <div class="div-form-form">
+                <button id="submit" class="button" type="submit">Submit Purchase Order Request</button>
+            </div>
         </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
