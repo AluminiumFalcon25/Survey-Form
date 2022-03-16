@@ -10,6 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
+    background-color: lightgoldenrodyellow;
 }
 
 #div-header {
@@ -43,10 +44,46 @@ header {
     width: fit-content;
 }
 
+#contract {
+    width: height:
+}
+
 @media only screen and (Min-width: 600px) {
     #survey-form {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .div-form {
+        display: grid;
+        align-self: center;
+        width: fit-content;
+        margin: 4rem auto;
+    }
+    .total-val {
+        display: grid;
+        gap: 10px;
+    }
+    #div-dropdown {
+        display: grid;
+    }
+    .po-calc {
+        display: grid;
+        gap: 0px;
+        /* in hindsight, I would have made this a separate row along with the requested total */
+    }
+    #div-check {
+        display: grid;
+    }
+    #div-text {
+        display: grid;
+        align-self: start;
+        grid-column: span 2;
+    }
+    #contract {
+        width: 380px;
+        height: 300px;
     }
 }

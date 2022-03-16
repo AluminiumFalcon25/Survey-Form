@@ -62,13 +62,11 @@
             </div>
             <br>
             <div class="po-calc">
-                Quantity for PO: <input type="number" placeholder="0" class="qty" id="qty" />
-                <br> Price per Quantity:<input type="number" placeholder="0" id="po-price" />
+                Quantity for PO: <input type="number" placeholder="0" class="qty" id="qty" /> Price per Quantity:<input type="number" placeholder="0" id="po-price" />
+                <br>
+                <button id="equal" class="button" onclick="calculateTotal();">Calculate</button>
+                <!-- This needs to be a button not a div or the calc wont work. unfortunately it displays errors with missing required fields and html email errors. Ideally I would have the errors only show when the final submit button is pressed. I think the user experience here could be better. Not sure if the functions can be separated out between the buttons at this time. -->
             </div>
-            <br>
-            <button id="equal" class="button" onclick="calculateTotal();">Calculate</button>
-            <!-- This needs to be a button not a div or the calc wont work. unfortunately it displays errors with missing required fields and html email errors. Ideally I would have the errors only show when the final submit button is pressed. I think the user experience here could be better. Not sure if the functions can be separated out between the buttons at this time. -->
-            <br>
             <div class="total-val">Requested Total
                 <input type="text" id="total_value" />
             </div>
@@ -89,10 +87,8 @@
                 </label>
                 <br>
             </div>
-            <br>
             <div id="div-text" class="div-form-form">
                 <label id="text-label" for="text">Contract Details:</label>
-                <br>
                 <textarea id="contract" class="div-form-form" name="contract" placeholder="Enter Contract Terms"></textarea>
             </div>
             <br>
